@@ -1,0 +1,55 @@
+{
+  "name": "task2",
+  "title": "Manager",
+  "description": "Manages projects",
+  "$schema": "https://json.schemastore.org/youtrack-app.json",
+  "vendor": {
+    "name": "me",
+    "url": "https://me.com"
+  },
+  "icon": "icon.svg",
+  "widgets": [
+    {
+      "key": "mytask2",
+      "name": "Mytask2",
+      "indexPath": "mytask2/index.html",
+      "extensionPoint": "MAIN_MENU_ITEM",
+      "iconPath": "mytask2/widget-icon.svg",
+      "description": "Manages project finished status"
+    }
+  ],
+  "endpoints": [
+    {
+      "id": "backend",
+      "path": "/backend",
+      "methods": ["GET", "POST"],
+      "scope": "project"
+    }
+  ],
+  "permissions": [
+    {
+      "permission": "read-project"
+    },
+    {
+      "permission": "low-level-admin-write"
+    },
+    {
+      "permission": "update-project"
+    },
+    {
+      "permission": "read-custom-field"
+    },
+    {
+      "permission": "create-custom-field"
+    },
+    {
+      "permission": "update-custom-field"
+    },
+    {
+      "permission": "read-custom-field-bundle"
+    },
+    {
+      "permission": "create-custom-field-bundle"
+    }
+  ]
+}
