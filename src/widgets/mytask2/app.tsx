@@ -17,7 +17,6 @@ const AppComponent: React.FC = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  // Initialize API when host is ready
   useEffect(() => {
     if (host) {
       setApi(new YouTrackAPI(host));
@@ -57,8 +56,7 @@ const AppComponent: React.FC = () => {
       setStatuses((prev) => ({ ...prev, [projectId]: "updating" }));
 
       try {
-        // The API will now handle all the setup automatically
-        await api.updateProjectFinishedStatus(projectId, newFinishedValue);
+        // await api.updateProjectFinishedStatus(projectId, newFinishedValue);
 
         // Update local state on success
         setProjects((prev) =>
